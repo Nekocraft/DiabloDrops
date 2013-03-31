@@ -1,26 +1,26 @@
-name: DiabloDrops
+name: 更多掉落
 main: com.modcrafting.diablodrops.DiabloDrops
-version: ${version}
+version: 2.4.504
 website: http://dev.bukkit.org/server-mods/diablodrops/
 authors: [Deathmarine,Nunnery]
 description: >
-             Item Drop/Equip Enhancement Plugin.
+             物品装备掉落附魔插件
 loadbefore: [DiabloBosses, Identify, DiabloLoot, DiabloDungeonBridge]
 load: STARTUP
-             
+
 commands:
     diablodrops:
-        description: Allows user to spawn a type of item.
+        description: 允许用户生成一种物品
         aliases: [dd, ddrops, diablod]
         usage: /<command> [type]
         permission: diablodrops.dd
 permissions:
     diablodrops.dd:
-        description: Allows user to spawn a type of item.
+        description: 允许用户生成一种物品
         default: op
     diablodrops.debug:    
-        description: Allows user to receive debug messages.      
+        description: 允许用户接受调试信息    
         default: false
     diablodrops.reload:
-        description: Allows user to reload the plugin.
+        description: 允许用户重新加载插件
         default: op

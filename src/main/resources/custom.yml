@@ -8,7 +8,7 @@
 # - List of Strings enhanced 
 # - with ampersand color codes
 # - Not case sensitive
-Death Sword:
+白宝石之剑:
   Material: Diamond_Sword
   Color: White
   Enchantments:
@@ -18,13 +18,13 @@ Death Sword:
     DURABILITY: 9
     FIRE_ASPECT: 9
   Lore:
-  - '&8Mystic medievil sword for &6Marines'
-  - '&4Never need another one again.'
-Topple the Nun:
+  - '&8来自 &6白宝石小组 &8的问候!'
+  - '&4从此你不需要另一把剑了.'
+哲学之棍:
   Material: Stick
   Color: Bold
   Enchantments:
     KNOCKBACK: 10
   Lore:
-  - '&bKeeps them kids in line.'
+  - '&b乖乖♂站好.'
   

@@ -2,15 +2,16 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>DiabloDrops</groupId>
   <artifactId>DiabloDrops</artifactId>
+  <name>DiabloDrops</name>
+  <url>http://dev.bukkit.org/server-mods/diablodrops/</url>
+  <description>This plugin adjusts the mob dropping mechanics to include regularly dropped enchanted items that could be commonly found in Diablo.</description>
   <version>2.5.1</version>
-  <dependencies>
-    <dependency>
-      <groupId>org.bukkit</groupId>
-      <artifactId>bukkit</artifactId>
-      <version>1.4.7-R1.0</version>
-      <scope>compile</scope>
-    </dependency>
-  </dependencies>
+
+  <properties>
+    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    <bukkit.version>1.5.1-R0.1-SNAPSHOT</bukkit.version>
+  </properties>
+
   <repositories>
     <repository>
       <id>bukkit-repo</id>
@@ -25,6 +26,16 @@
       <url>http://repo.maven.apache.org/maven2</url>
     </repository>
   </repositories>
+
+  <dependencies>
+    <dependency>
+      <groupId>org.bukkit</groupId>
+      <artifactId>bukkit</artifactId>
+      <version>${bukkit.version}</version>
+      <scope>compile</scope>
+    </dependency>
+  </dependencies>
+
   <pluginRepositories>
     <pluginRepository>
       <releases>
@@ -38,109 +49,40 @@
       <url>http://repo.maven.apache.org/maven2</url>
     </pluginRepository>
   </pluginRepositories>
+
   <build>
-    <sourceDirectory>.\src</sourceDirectory>
-    <outputDirectory>.\dist</outputDirectory>
+    <defaultGoal>clean install</defaultGoal>
+    <finalName>${project.name}</finalName>
     <resources>
       <resource>
-        <directory>.\</directory>
+        <directory>${basedir}/src/main/resources</directory>
         <filtering>true</filtering>
         <includes>
-          <include>config.yml</include>
-          <include>plugin.yml</include>
-          <include>custom.yml</include>
-          <include>set.yml</include>
-          <include>tier.yml</include>
-          <include>prefix.txt</include>
-          <include>suffix.txt</include>
-          <include>defenselore.txt</include>
-          <include>offenselore.txt</include>
+          <include>*</include>
         </includes>
       </resource>
     </resources>
     <directory>.\target</directory>
-    <finalName>DiabloDrops</finalName>
-    <pluginManagement>
-      <plugins>
-        <plugin>
-          <artifactId>maven-antrun-plugin</artifactId>
-          <version>1.3</version>
-        </plugin>
-        <plugin>
-          <artifactId>maven-assembly-plugin</artifactId>
-          <version>2.2-beta-5</version>
-        </plugin>
-        <plugin>
-          <artifactId>maven-dependency-plugin</artifactId>
-          <version>2.1</version>
-        </plugin>
-        <plugin>
-          <artifactId>maven-release-plugin</artifactId>
-          <version>2.0</version>
-        </plugin>
-      </plugins>
-    </pluginManagement>
     <plugins>
       <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
         <artifactId>maven-compiler-plugin</artifactId>
         <version>2.3.2</version>
-        <executions>
-          <execution>
-            <id>default-compile</id>
-            <phase>compile</phase>
-            <goals>
-              <goal>compile</goal>
-            </goals>
-            <configuration>
-              <source>1.6</source>
-              <target>1.6</target>
-            </configuration>
-          </execution>
-        </executions>
         <configuration>
           <source>1.6</source>
           <target>1.6</target>
+          <showDeprecation>true</showDeprecation>
+          <showWarnings>true</showWarnings>
+          <fork>true</fork>
         </configuration>
       </plugin>
+
       <plugin>
-        <artifactId>maven-clean-plugin</artifactId>
-        <version>2.4.1</version>
-        <executions>
-          <execution>
-            <id>default-clean</id>
-            <phase>clean</phase>
-            <goals>
-              <goal>clean</goal>
-            </goals>
-          </execution>
-        </executions>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-release-plugin</artifactId>
+        <version>2.3.2</version>
       </plugin>
-      <plugin>
-        <artifactId>maven-install-plugin</artifactId>
-        <version>2.3.1</version>
-        <executions>
-          <execution>
-            <id>default-install</id>
-            <phase>install</phase>
-            <goals>
-              <goal>install</goal>
-            </goals>
-          </execution>
-        </executions>
-      </plugin>
-      <plugin>
-        <artifactId>maven-resources-plugin</artifactId>
-        <version>2.5</version>
-        <executions>
-          <execution>
-            <id>default-resources</id>
-            <phase>process-resources</phase>
-            <goals>
-              <goal>resources</goal>
-            </goals>
-          </execution>
-        </executions>
-      </plugin>
+
       <plugin>
         <artifactId>maven-jar-plugin</artifactId>
         <version>2.3.2</version>
@@ -153,7 +95,11 @@
             </goals>
           </execution>
         </executions>
+        <configuration>
+          <outputDirectory>../jars</outputDirectory>
+        </configuration>
       </plugin>
+
       <plugin>
         <groupId>org.apache.maven.plugins</groupId>
         <artifactId>maven-javadoc-plugin</artifactId>
@@ -164,6 +110,7 @@
       </plugin>
     </plugins>
   </build>
+
   <reporting>
     <plugins>
       <plugin>
@@ -176,9 +123,7 @@
       </plugin>
     </plugins>
   </reporting>
-  <name>DiabloDrops</name>
-  <url>http://dev.bukkit.org/server-mods/diablodrops/</url>
-  <description>This plugin adjusts the mob dropping mechanics to include regularly dropped enchanted items that could be commonly found in Diablo.</description>
+
   <ciManagement>
   	<system>Jenkins</system>
   	<url>https://diabloplugins.ci.cloudbees.com/job/DiabloDrops/</url>

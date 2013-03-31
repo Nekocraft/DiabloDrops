@@ -34,10 +34,10 @@ public class Socket extends Drop
 
     public Socket(final Material mat)
     {
-        super(mat, color(), "Socket Enhancement", ChatColor.GOLD
-                + "Put in the bottom of a furnace", ChatColor.GOLD
-                + "with another item in the top", ChatColor.GOLD
-                + "to add socket enhancements.");
+        super(mat, color(), "镶嵌物", ChatColor.GOLD
+                + "将其放置于火炉底部", ChatColor.GOLD
+                + "并将可镶嵌的物品放置于顶部", ChatColor.GOLD
+                + "以此添加附魔效果.");
         SkullType type = null;
         int numType = DiabloDrops.getInstance().getSingleRandom()
                 .nextInt(SkullType.values().length);

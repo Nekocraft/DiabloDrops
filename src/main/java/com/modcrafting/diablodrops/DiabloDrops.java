@@ -34,10 +34,6 @@ import com.modcrafting.diablodrops.sets.ArmorSet;
 import com.modcrafting.diablodrops.sets.SetsAPI;
 import com.modcrafting.diablodrops.tier.Tier;
 
-import net.h31ix.updater.Updater;
-import net.h31ix.updater.Updater.UpdateResult;
-import net.h31ix.updater.Updater.UpdateType;
-
 public class DiabloDrops extends JavaPlugin
 {
     private static DiabloDrops instance;
@@ -159,7 +155,7 @@ public class DiabloDrops extends JavaPlugin
             for (File f : loc.listFiles())
                 if (f.getName().endsWith(".txt"))
                 {
-                    getLogger().info("Loading Prefix File:" + f.getName());
+                    getLogger().info("载入前缀文件:" + f.getName());
                     nameLoader.loadMaterialFile(hmprefix,
                             new File(loc, f.getName()));
                 }
@@ -171,7 +167,7 @@ public class DiabloDrops extends JavaPlugin
             for (File f : sloc.listFiles())
                 if (f.getName().endsWith(".txt"))
                 {
-                    getLogger().info("Loading Suffix File:" + f.getName());
+                    getLogger().info("载入后缀文件:" + f.getName());
                     nameLoader.loadMaterialFile(hmsuffix,
                             new File(sloc, f.getName()));
                 }
@@ -208,38 +204,6 @@ public class DiabloDrops extends JavaPlugin
         getCommand("diablodrops").setExecutor(new DiabloDropCommand(this));
 
         final PluginDescriptionFile pdf = getDescription();
-        if (config.getBoolean("Plugin.AutoUpdate", true))
-        {
-            getServer().getScheduler().runTask(this, new Runnable()
-            {
-                @Override
-                public void run()
-                {
-                    Updater up = new Updater(getInstance(), pdf.getName()
-                            .toLowerCase(), getFile(), UpdateType.DEFAULT, true);
-                    if (!up.getResult().equals(UpdateResult.SUCCESS)
-                            || up.pluginFile(getFile().getName()))
-                    {
-                        if (up.getResult().equals(
-                                Updater.UpdateResult.FAIL_NOVERSION))
-                        {
-                            log.info("Unable to connect to dev.bukkit.org.");
-                        }
-                        else
-                        {
-                            log.info("No Updates found on dev.bukkit.org.");
-                        }
-                    }
-                    else
-                    {
-                        log.info("Update "
-                                + up.getLatestVersionString()
-                                + " found and downloaded please restart your server.");
-                    }
-                }
-
-            });
-        }
         // Jenkins AutoUpdater
         /*
          * if (config.getBoolean("Plugin.Dev.Update", false)) { id =

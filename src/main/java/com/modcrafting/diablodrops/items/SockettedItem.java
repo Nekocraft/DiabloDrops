@@ -38,7 +38,7 @@ public class SockettedItem extends Drop
                                         .getMaxSockets());
         for (int i = 0; i < enhance; i++)
         {
-            list.add(color() + "(Socket)");
+            list.add(color() + "(镶嵌物)");
         }
         return list.toArray(new String[0]);
     }
