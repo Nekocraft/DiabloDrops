@@ -8,7 +8,7 @@
 # - List of Strings enhanced 
 # - with ampersand color codes
 # - Not case sensitive
-°×±¦Ê¯Ö®½£:
+ç™½å®çŸ³ä¹‹å‰‘:
   Material: Diamond_Sword
   Color: White
   Enchantments:
@@ -18,13 +18,13 @@
     DURABILITY: 9
     FIRE_ASPECT: 9
   Lore:
-  - '&8À´×Ô &6°×±¦Ê¯Ğ¡×é &8µÄÎÊºò!'
-  - '&4´Ó´ËÄã²»ĞèÒªÁíÒ»°Ñ½£ÁË.'
-ÕÜÑ§Ö®¹÷:
+  - '&8æ¥è‡ª &6ç™½å®çŸ³å°ç»„ &8çš„é—®å€™!'
+  - '&4ä»æ­¤ä½ ä¸éœ€è¦å¦ä¸€æŠŠå‰‘äº†.'
+å“²å­¦ä¹‹æ£:
   Material: Stick
   Color: Bold
   Enchantments:
     KNOCKBACK: 10
   Lore:
-  - '&b¹Ô¹Ô¡áÕ¾ºÃ.'
+  - '&bä¹–ä¹–â™‚ç«™å¥½.'
   

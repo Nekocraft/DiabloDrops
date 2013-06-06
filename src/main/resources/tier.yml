@@ -2,7 +2,7 @@
 # DisplayName is only used if Tier name displaying is enabled in config.yml
 Legendary:
   Color: Gold
-  DisplayName: ´«Ææ¼¶
+  DisplayName: ä¼ å¥‡çº§
   Chance: 3
   DropChance: 100
   Enchantments:
@@ -10,7 +10,7 @@ Legendary:
     Levels: 10
 Lore:
   Color: Yellow
-  DisplayName: ¹Åµä¼¶
+  DisplayName: å¤å…¸çº§
   Chance: 7
   DropChance: 100
   Enchantments:
@@ -18,7 +18,7 @@ Lore:
     Levels: 9
 Magical:
   Color: Blue
-  DisplayName: Ä§·¨µÄ
+  DisplayName: é­”æ³•çš„
   Chance: 15
   DropChance: 100
   Enchantments:
@@ -26,7 +26,7 @@ Magical:
     Levels: 4
 Rare:
   Color: Red
-  DisplayName: Ï¡ÓĞµÄ
+  DisplayName: ç¨€æœ‰çš„
   Chance: 20
   DropChance: 100
   Enchantments:
@@ -34,7 +34,7 @@ Rare:
     Levels: 5
 Set:
   Color: Green
-  DisplayName: Ì××°
+  DisplayName: å¥—è£…
   Chance: 10
   DropChance: 100
   Enchantments:
@@ -42,7 +42,7 @@ Set:
     Levels: 6
 Unidentified:
   Color: Magic
-  DisplayName: Î´¼ø¶¨
+  DisplayName: æœªé‰´å®š
   Chance: 33
   DropChance: 100
   #When Identified

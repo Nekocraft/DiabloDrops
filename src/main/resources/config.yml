@@ -1,16 +1,16 @@
-#Configuration#
+#Configuration - 配置文件#
 Plugin:
-#AutoUpdate the plugin when a update is found#
-  AutoUpdate: true
-  #Debug Mode#
+#AutoUpdate the plugin when a update is found - 自动更新#
+  AutoUpdate: false
+  #Debug Mode - 调试模式#
   Debug: false
-#Reasons not to add special equipmemt#
-#If true blocks usage#
+#Reasons not to add special equipmemt - 不添加附魔的情况#
+#If true blocks usage - true是禁止#
 Reason:
   Spawner: true
   Egg: true
 DropFix:
-  #Adds Damages to all drops#
+  #Adds Damages to all drops - 添加伤害#
   Damage: true
 #When adding enchantments, only allow safe or item specific enchantments#
 SafeEnchant:
